@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucky Number Draw</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Win Big with Your Numbers!</h1>
+        <div class="grid-container">
+            <div class="white-container">
+                <form>
+                    <label for="name">Your Numbers</label>
+                    <div>
+                        <input type="text" id="name" name="name" placeholder="Enter 5 digit number" maxlength="5">
+                        <button type="button" onclick="startGenerating()" class="startbtn">Start</button>
+                    </div>
+                    <label for="name">Random Number</label>
+                    <div>
+                        <div class="numberDisplay" id="numberDisplay1"></div>
+                        <div class="numberDisplay" id="numberDisplay2"></div>
+                        <div class="numberDisplay" id="numberDisplay3"></div>
+                        <div class="numberDisplay" id="numberDisplay4"></div>
+                        <div class="numberDisplay" id="numberDisplay5"></div>
+                    </div>
+                    <p> You have <span id="chancesLeft">2</span> chance(s) left today</p>
+                </form>
+            </div>
+            <div class="gif">
+                <img src="assets/gift.gif" alt="Gift" style="width:460px;height:460px;margin-left:-240px;">
+            </div>
+        </div>
+        <div>
+            <div class="purple-container">
+                <img src="assets/image ad.svg" alt="Ads" style="width:280px;height:183px;float: left;">
+                <div>
+                    <h3>Be a Big Winner，Your Chance is Here!</h3>
+                    <p>Join now for your shot at winning big, don't miss out!</p>
+                    <button id="ViewPrizeBtn" class="viewbtn">View Prize</button>
+
+                    <!-- The Modal -->
+                    <div id="PrizeModal" class="modal">
+
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <h2>Lucky Draw Prize (12 Feb - 15 Feb)</h2>
+                            <img src="assets/prize.svg" alt="Ads" style="width:995px;height:376px;margin-bottom: 36px;">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add the ResultModal -->
+<div id="ResultModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-result">
+        <span id="resultClose" class="close">&times;</span>
+        <img src="assets/congrat img.svg" alt="Ads" style="width:200px;height:200px;">
+        <h2>Congratulations</h2>
+        <p><span id="matchResult"></span>/5 digit match!</p>
+    </div>
+</div>
+
+
+        <script src="script.js"></script>
+</body>
+
+</html>
